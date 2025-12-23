@@ -1,4 +1,4 @@
-# Jeongin | Product Designer
+# Jeong-in | Product Designer
 
 Transitioning from Public Relations to Product Design. 
 Currently focused on building a bridge between design and code.

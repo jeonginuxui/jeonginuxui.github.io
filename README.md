@@ -1,4 +1,3 @@
-# jeonginuxui.github.io
 # Jeongin | Product Designer
 
 Transitioning from Public Relations to Product Design. 

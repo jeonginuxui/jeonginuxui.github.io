@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeong-in Kwon | Product Designer</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="nav-container">
+            <a href="#" class="logo">J</a>
+            <ul class="nav-links">
+                <li><a href="#project">Project</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="레주메들어갈자리.pdf" class="nav-resume" target="_blank">Resume</a></li>
+            </ul>
+            <div class="lang-selector">
+                <span>EN</span> | <span>JP</span> | <span>KR</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="container">
+            <div class="hero-text">
+                <h1 class="title-large">Product<br>Designer</h1>
+                <h2 class="name">Jeong-in Kwon</h2>
+                <p class="description">
+                    사용자의 방황을 확신으로 바꾸는 디자이너입니다. 5년의 논리적 사고 훈련과 일본에서의 실무 경험을 바탕으로, 복잡함을 덜어내고 본질만 남기는 디자인을 지향합니다.
+                </p>
+            </div>
+            <div class="hero-image">
+                <img src="profile.png" alt="Jeong-in Kwon"> </div>
+        </section>
+
+        <section id="project" class="container">
+            <h2 class="section-title">Project</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="card-image"><img src="p1.png" alt="UI Project"></div>
+                    <h3>UI improvement project</h3>
+                    <p>복잡한 결제 프로세스를 단순화하여 전환율을 개선한 프로젝트입니다. 사용자 데이터를 기반으로 핵심 문제를 정의하고 해결했습니다.</p>
+                </div>
+                <div class="project-card">
+                    <div class="card-image"><img src="p2.png" alt="UX Project"></div>
+                    <h3>UX improvement project</h3>
+                    <p>사용자 여정 지도를 분석하여 서비스 이탈 지점을 찾아내고, 직관적인 인터페이스로 재설계하여 사용성을 극대화했습니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="container">
+            <h2 class="section-title">Experience</h2>
+            
+            <div class="exp-item">
+                <div class="exp-header">
+                    <h3>Product Design Immersion</h3>
+                    <span class="date">2025.10 — Present</span>
+                </div>
+                <p class="exp-subtitle">Transitioned to Product Design with a focus on solving complex user problems.</p>
+                <ul class="exp-details">
+                    <li>Improved service conversion rates by identifying user pain points.</li>
+                    <li>Developed and maintained scalable component libraries.</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <h3>City Hall Affiliated Center (Japan)</h3>
+                    <span class="date">2023.08 — 2025.08</span>
+                </div>
+                <p class="exp-subtitle">PR & Communication Specialist</p>
+                <ul class="exp-details">
+                    <li>Simplified complex public policies into intuitive visual guides.</li>
+                    <li>Led communications with local Japanese partners and stakeholders.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="container">
+            <h2 class="section-title">Contact</h2>
+            <p class="contact-sub">Let's build something great together.</p>
+            <a href="mailto:jeonginuxui@gmail.com" class="email">jeonginuxui@gmail.com</a>
+            <a href="레주메들어갈자리.pdf" class="resume-btn" target="_blank">Resume <span class="arrow">↓</span></a>
+            
+            <div class="sns-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">Behance</a>
+            </div>
+        </section> 
+    </main>
+       <button id="back-to-top" class="top-btn" aria-label="맨 위로 가기">
+        <span class="arrow-up">↑</span> </button>
+
+
+   
+
+    <footer>
+        <p>&copy; jeongin-kwon</p>
+    </footer>
+
+<script>
+        // 1. 섹션 나타나기 애니메이션 (기존 코드)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) entry.target.classList.add('show');
+            });
+        });
+        document.querySelectorAll('section').forEach((el) => observer.observe(el));
+
+        // 2. Top 버튼 스크롤 감지 및 기능 (추가된 코드)
+        const backToTopBtn = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) { // 300px 이상 스크롤 시 등장
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
